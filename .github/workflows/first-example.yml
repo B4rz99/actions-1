@@ -6,11 +6,14 @@ jobs:
     first-job:
         runs-on: ubuntu-latest
         steps:
-            - name: Print Hello World
-              run: echo "Hello World"
+          - name: Checkout Repository
+            uses: actions/checkout@v4
             
-            - name: List Files
-              run: ls
-            
-            - name: Read File
-              run: cat README.md
+          - name: Print Hello World
+            run: echo "Hello World"
+          
+          - name: List Files
+            run: ls
+          
+          - name: Read File
+            run: cat README.md
